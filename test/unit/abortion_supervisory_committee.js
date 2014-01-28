@@ -1,4 +1,4 @@
-var _ = require('underscore'),
+var _ = require('lodash'),
     helper = require('../helper');
 
 exports['extracts title'] = function(test) {
