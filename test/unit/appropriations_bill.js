@@ -1,4 +1,5 @@
-var helper = require('../helper');
+var _ = require('lodash'),
+    helper = require('../helper');
 
 exports['extracts details'] = function(test) {
   helper.parse(__filename, function(err, debate) {
@@ -11,7 +12,7 @@ exports['extracts details'] = function(test) {
     test.equals(debate.advance, true);
 
     section = debate.sections[0];
-    test.equals(section.heading, 'Appropriation (2007/08 Estimates) Bill');
+    test.equals(_.first(section.headings), 'Appropriation (2007/08 Estimates) Bill');
 
     test.equals(section.events.length, 2);
 

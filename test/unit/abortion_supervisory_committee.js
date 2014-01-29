@@ -21,7 +21,8 @@ exports['parse debate section'] = function(test) {
     test.equals(s.sections.length, 1);
 
     section = s.sections[0];
-    test.equals(section.heading, 'Appointments');
+    test.ok(_.isArray(section.headings));
+    test.equals(_.first(section.headings), 'Appointments');
 
     test.ok(section.events);
     test.equals(section.events.length, 4);
