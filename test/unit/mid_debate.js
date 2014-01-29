@@ -24,7 +24,6 @@ exports['extracts debate'] = function(test) {
     test.equals(_.first(procedural.items), 'Debate resumed.');
     test.equals(procedural.heading, 'Third Readings');
 
-    console.log(section);
     test.done();
   });
 };
