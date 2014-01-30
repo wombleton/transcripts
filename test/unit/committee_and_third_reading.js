@@ -21,10 +21,6 @@ exports['extracts debate'] = function(test) {
 
     test.equals(speech.heading, 'In Committee');
 
-    contribution = _.last(committee.events);
-
-    test.equals(_.first(contribution.items), 'Parts 1 and 2, and clauses 1 to 3');
-
     reading = _.last(debate.sections);
 
     test.equals(_.first(reading.headings), 'Third Reading');
