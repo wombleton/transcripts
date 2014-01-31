@@ -17,4 +17,3 @@ exports['extracts debate'] = function(test) {
     test.done();
   });
 };
-
