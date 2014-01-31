@@ -1,10 +1,7 @@
-var _ = require('lodash'),
-    helper = require('../helper');
+var helper = require('../helper');
 
 exports['extracts debate'] = function(test) {
   helper.parse(__filename, function(err, debate) {
-    var speech = debate.sections[0];
-
     test.equals(debate.title, 'Budget Statement — Budget Debate, Procedure');
 
     test.equals(debate.sections.length, 2);
